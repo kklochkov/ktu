@@ -1,0 +1,1 @@
+#include "../src/calendarweeksign.h"

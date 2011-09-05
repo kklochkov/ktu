@@ -1,0 +1,15 @@
+#ifndef GLOBAL_H
+#define GLOBAL_H
+
+#ifdef CURRICULUMN_STATICLIB 
+#  undef CURRICULUMN_SHAREDLIB 
+#  define CURRICULUMN_EXPORT 
+#else
+#  ifdef CURRICULUMN_MAKEDLL 
+#   define CURRICULUMN_EXPORT Q_DECL_EXPORT 
+#  else
+#   define CURRICULUMN_EXPORT Q_DECL_IMPORT
+#  endif
+#endif
+
+#endif
